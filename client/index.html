@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de sesión</title>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Neucha" rel="stylesheet">
   </head>
@@ -13,9 +13,11 @@
     <div class="loginContainer">
       <div class="loginTitle">Inicio de Sesión</div>
       <div class="fields-Container">
-        <input type="text" id="user" placeholder="Usuario..." />
-        <input type="password" id="pass" placeholder="Contraseña..." />
-        <button id="login" class="loginButton">Ingresar</button>
+        <form method="post">
+          <input type="text" name="user" id="user" placeholder="Usuario..." /> <br>
+          <input type="password" name="pass" id="pass" placeholder="Contraseña..." /> <br>
+          <button id="login" class="loginButton">Ingresar</button>
+        </form>
       </div>
     </div>
     <script src="js/jquery.js"></script>
@@ -26,7 +28,7 @@
             if (nombreUsuario.val() != "" && pass.val() != "") {
                 $.post('/login',{user: nombreUsuario.val(), pass: pass.val()}, function(response) {
                     if (response == "Validado") {
-                        window.location.href = "http://localhost:3000/main.html"
+                        window.location.href = "http://localhost:5500/client/main.html"
                     }
                 })
             } else {

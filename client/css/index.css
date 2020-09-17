@@ -7,10 +7,6 @@ html {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: url('../img/back.jpeg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
   font-family: 'Kaushan Script', cursive;
   font-family: 'Neucha', cursive;
 }
@@ -19,6 +15,10 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
+  background: url('../img/back.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .headerCalendar{
@@ -62,7 +62,7 @@ body {
 }
 
 .formContainer {
-  width: 30%;
+  width: 20%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   font-family: 'Neucha', cursive;
